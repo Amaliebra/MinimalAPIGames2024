@@ -11,7 +11,7 @@
 
     public class Data
     {
-        public List<Game> Games = new List<Game>
+        public static List<Game> Games = new List<Game>
         {
 
         new Game {

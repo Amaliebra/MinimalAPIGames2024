@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-List<Game> games = LoadGameData();
+List<Game> games = Data.Games;
 
 app.UseHttpsRedirection();
 
@@ -72,9 +72,3 @@ app.MapDelete("/game/{id}", (int id) =>
 });
 
 app.Run();
-
-
-List<Game> LoadGameData()
-{
-    return games;
-}
