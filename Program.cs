@@ -18,7 +18,7 @@ var games = new List<Game>
 {
     new Game { 
         Id = 1, 
-        Title = "Metaphor", 
+        Title = "Metaphor: ReFantazio", 
         Publisher = "", 
         MetacriticScore = 92 , 
         UserMetacriticScore = 0},
@@ -78,6 +78,17 @@ app.MapPut("/game/{id}", (Game updatedGame,int id) =>
 
     game.Title = updatedGame.Title;
     game.Publisher = updatedGame.Publisher;
+
+    return Results.Ok(game);
+});
+
+app.MapDelete("/game/{id}", (int id) =>
+{
+    var game = games.Find(g => g.Id == id);
+    if (game is null)
+        return Results.NotFound("Game was not found");
+
+    games.Remove(game);
 
     return Results.Ok(game);
 });
