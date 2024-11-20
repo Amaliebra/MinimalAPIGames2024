@@ -64,6 +64,24 @@ app.MapGet("/game/{id}", (int id) =>
     return Results.Ok(game);
 });
 
+app.MapPost("/game", (Game game) =>
+{
+    games.Add(game);
+    return games;
+});
+
+app.MapPut("/game/{id}", (Game updatedGame,int id) =>
+{
+    var game = games.Find(g => g.Id == id);
+    if (game is null)
+        return Results.NotFound("Game was not found");
+
+    game.Title = updatedGame.Title;
+    game.Publisher = updatedGame.Publisher;
+
+    return Results.Ok(game);
+});
+
 app.Run();
 
 class Game
