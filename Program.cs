@@ -19,33 +19,81 @@ var games = new List<Game>
     new Game { 
         Id = 1, 
         Title = "Metaphor: ReFantazio", 
-        Publisher = "", 
+        Publisher = "Sega", 
         MetacriticScore = 92 , 
-        UserMetacriticScore = 0},
+        UserMetacriticScore = 8.9},
     new Game {
         Id = 2,
         Title = "Tekken 8",
-        Publisher = "",
-        MetacriticScore = 91 ,
-        UserMetacriticScore = 0},
+        Publisher = "Bandai Namco Games",
+        MetacriticScore = 90,
+        UserMetacriticScore = 7.6},
     new Game {
         Id = 3,
         Title = "UFO 50",
-        Publisher = "",
-        MetacriticScore = 91 ,
-        UserMetacriticScore = 0},
-    new Game {
-        Id = 3,
-        Title = "Animal Well",
-        Publisher = "",
-        MetacriticScore = 91 ,
-        UserMetacriticScore = 0},
+        Publisher = "Mossmouth",
+        MetacriticScore = 91,
+        UserMetacriticScore = 7.9},
     new Game {
         Id = 4,
-        Title = "Satisfactory",
-        Publisher = "",
+        Title = "Animal Well",
+        Publisher = "Bigmode",
         MetacriticScore = 91 ,
-        UserMetacriticScore = 0}
+        UserMetacriticScore = 8.0},
+    new Game {
+        Id = 5,
+        Title = "Satisfactory",
+        Publisher = "Coffee Stain Studios",
+        MetacriticScore = 91 ,
+        UserMetacriticScore = 8.1},
+    new Game {
+        Id = 6,
+        Title = "Balatro",
+        Publisher = "Playstack",
+        MetacriticScore = 90,
+        UserMetacriticScore = 8.3},
+    new Game {
+        Id = 7,
+        Title = "Shin Megami Tensei V: Vengeance",
+        Publisher = "Sega",
+        MetacriticScore = 87,
+        UserMetacriticScore = 8.1},
+    new Game {
+        Id = 8,
+        Title = "Thank Godness You're Here!",
+        Publisher = "Panic Inc.",
+        MetacriticScore = 90,
+        UserMetacriticScore = 7.8},
+    new Game {
+        Id = 9,
+        Title = "Like a Dragon: Infinite Wealth",
+        Publisher = "Sega",
+        MetacriticScore = 89,
+        UserMetacriticScore = 8.6},
+    new Game {
+        Id = 10,
+        Title = "Kill Knight",
+        Publisher = "PlaySide Studios",
+        MetacriticScore = 89,
+        UserMetacriticScore = 8.1},
+    new Game {
+        Id = 11,
+        Title = "Kill Knight",
+        Publisher = "PlaySide Studios",
+        MetacriticScore = 89,
+        UserMetacriticScore = 8.1},
+    new Game {
+        Id = 12,
+        Title = "Kill Knight",
+        Publisher = "PlaySide Studios",
+        MetacriticScore = 89,
+        UserMetacriticScore = 8.1},
+    new Game {
+        Id = 13,
+        Title = "Kill Knight",
+        Publisher = "PlaySide Studios",
+        MetacriticScore = 89,
+        UserMetacriticScore = 8.1},
 };
 
 app.UseHttpsRedirection();
