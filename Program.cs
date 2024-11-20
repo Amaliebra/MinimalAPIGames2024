@@ -14,18 +14,63 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+var games = new List<Game>
+{
+    new Game { 
+        Id = 1, 
+        Title = "Metaphor", 
+        Publisher = "", 
+        MetacriticScore = 92 , 
+        UserMetacriticScore = 0},
+    new Game {
+        Id = 2,
+        Title = "Tekken 8",
+        Publisher = "",
+        MetacriticScore = 91 ,
+        UserMetacriticScore = 0},
+    new Game {
+        Id = 3,
+        Title = "UFO 50",
+        Publisher = "",
+        MetacriticScore = 91 ,
+        UserMetacriticScore = 0},
+    new Game {
+        Id = 3,
+        Title = "Animal Well",
+        Publisher = "",
+        MetacriticScore = 91 ,
+        UserMetacriticScore = 0},
+    new Game {
+        Id = 4,
+        Title = "Satisfactory",
+        Publisher = "",
+        MetacriticScore = 91 ,
+        UserMetacriticScore = 0}
+};
+
 app.UseHttpsRedirection();
 
-app.MapGet("/game", () =>{
+app.MapGet("/game", () =>
+{
+    return games;
+});
 
-})
+app.MapGet("/game/{id}", (int id) =>
+{
+    var game = games.Find(g => g.Id == id);
+    if (game is null)
+        return Results.NotFound("Game was not found");
+
+    return Results.Ok(game);
+});
 
 app.Run();
 
-class Games
+class Game
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Title { get; set; }
     public string Publisher { get; set; }
+    public int MetacriticScore { get; set; }
     public double UserMetacriticScore { get; set; }
 }
